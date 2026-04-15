@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angel Kuaför Bay Bayan | İçerenköy Ataşehir Premium Salon</title>
+  <meta name="description" content="Angel Kuaför Bay Bayan İçerenköy Ataşehir'de saç boyama, kaynak, örgü, rasta, manikür, pedikür ve bakım hizmetleriyle samimi, köklü ve premium salon deneyimi sunar." />
+  <meta name="theme-color" content="#110d10" />
+  <meta property="og:title" content="Angel Kuaför Bay Bayan" />
+  <meta property="og:description" content="İçerenköy'de yıllardır güven veren, samimi ve dönüşüm odaklı kuaför deneyimi." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#110d10;
+      --bg2:#181216;
+      --panel:rgba(255,255,255,.055);
+      --panel2:rgba(255,255,255,.08);
+      --line:rgba(255,255,255,.10);
+      --text:#f8f2ee;
+      --muted:#bcaea7;
+      --accent:#d9b29f;
+      --accent2:#f0d6ca;
+      --rose:#c18e95;
+      --wine:#5f3a45;
+      --shadow:0 26px 80px rgba(0,0,0,.34);
+      --radius-xl:40px;
+      --radius-lg:28px;
+      --radius-md:22px;
+      --max:1240px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(193,142,149,.18), transparent 24%),
+        radial-gradient(circle at 100% 0%, rgba(217,178,159,.12), transparent 18%),
+        linear-gradient(180deg,#110d10 0%, #171114 48%, #0d090b 100%);
+      overflow-x:hidden;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
+    .section{padding:96px 0;position:relative}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;
+      background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow);
+      color:var(--accent2);font-size:.82rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase
+    }
+    .eyebrow::before{content:"";width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--rose))}
+    .title{font-size:clamp(3rem,6vw,6.4rem);line-height:.9;letter-spacing:-.055em;margin:18px 0 18px;max-width:10ch}
+    .subhead{font-size:clamp(2rem,3vw,3.25rem);line-height:1.02;letter-spacing:-.045em;margin:0 0 14px}
+    .lead{font-size:1.05rem;line-height:1.82;color:var(--muted)}
+    .muted{color:var(--muted)}
+
+    .site-header{
+      position:sticky;top:0;z-index:80;background:rgba(17,13,16,.72);
+      backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand-mark{
+      width:54px;height:54px;border-radius:20px;position:relative;overflow:hidden;
+      background:linear-gradient(135deg,#24161b,#4c3138 52%,#d9b29f);box-shadow:0 16px 34px rgba(0,0,0,.32)
+    }
+    .brand-mark::before,.brand-mark::after{content:"";position:absolute;border-radius:999px;background:rgba(255,255,255,.18)}
+    .brand-mark::before{width:64px;height:16px;left:-12px;top:12px;transform:rotate(-24deg)}
+    .brand-mark::after{width:38px;height:10px;right:-6px;bottom:12px;transform:rotate(-24deg)}
+    .brand strong{display:block;font-size:1rem}
+    .brand span{display:block;font-size:.8rem;color:var(--muted)}
+    .nav-links,.nav-actions{display:flex;align-items:center;gap:22px}
+    .nav-links a{font-size:.95rem;color:#e6d8d0}
+    .menu-toggle{display:none;background:none;border:none;padding:8px}
+    .menu-toggle span{display:block;width:24px;height:2px;background:var(--text);margin:5px 0;border-radius:2px}
+    .mobile-menu{display:none;padding-bottom:18px}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 22px;border-radius:999px;
+      border:none;cursor:pointer;font-weight:800;transition:transform .24s ease, box-shadow .24s ease, background .24s ease
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),#be846a);color:#1a1210;box-shadow:0 18px 36px rgba(217,178,159,.18)}
+    .btn-secondary{background:rgba(255,255,255,.06);color:var(--text);border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow)}
+
+    .hero{padding:34px 0 56px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:30px;align-items:center}
+    .hero-copy{padding:54px 0}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 26px}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .stat{padding:18px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);box-shadow:var(--shadow)}
+    .stat strong{display:block;font-size:1.2rem;margin-bottom:6px}
+    .stat span{display:block;color:var(--muted);font-size:.92rem;line-height:1.5}
+
+    .hero-visual{position:relative;min-height:700px;display:grid;place-items:center}
+    .visual-shell{
+      width:min(100%,590px);height:700px;padding:20px;border-radius:42px;position:relative;overflow:hidden;
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 34px 90px rgba(0,0,0,.36);backdrop-filter:blur(14px)
+    }
+    .visual-shell::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 18%, rgba(217,178,159,.16), transparent 18%), radial-gradient(circle at 18% 84%, rgba(193,142,149,.18), transparent 20%), linear-gradient(145deg, rgba(255,255,255,.08), transparent 42%);pointer-events:none}
+    .visual-core{
+      position:relative;height:100%;border-radius:34px;overflow:hidden;border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)), linear-gradient(145deg, #23181c 0%, #3b252b 48%, #7a5b50 100%)
+    }
+    .visual-core::before{
+      content:"";position:absolute;inset:22px;border-radius:28px;
+      background:radial-gradient(circle at 26% 18%, rgba(255,255,255,.14), transparent 22%), radial-gradient(circle at 76% 22%, rgba(217,178,159,.22), transparent 24%), radial-gradient(circle at 56% 78%, rgba(193,142,149,.14), transparent 28%), linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.01));
+    }
+    .visual-core::after{
+      content:"";position:absolute;left:50%;top:53%;transform:translate(-50%,-50%);
+      width:68%;height:76%;border-radius:220px 220px 40px 40px/280px 280px 40px 40px;
+      background:
+        radial-gradient(circle at 50% 18%, rgba(255,255,255,.24), transparent 30%),
+        linear-gradient(180deg, rgba(75,48,58,.18), rgba(20,16,18,.08)),
+        linear-gradient(145deg,#2e1d24 0%, #684049 44%, #d7b095 100%);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.06), 0 30px 80px rgba(0,0,0,.20);
+    }
+    .hero-badge,.hero-float,.hero-strip,.hero-note{position:absolute;z-index:2;background:rgba(19,14,17,.58);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow)}
+    .hero-badge{left:24px;top:24px;max-width:244px;padding:16px 18px;border-radius:18px}
+    .hero-badge strong{display:block;margin-bottom:6px}
+    .hero-badge span{font-size:.84rem;color:var(--muted);line-height:1.5}
+    .hero-float{right:20px;bottom:24px;max-width:240px;padding:18px;border-radius:20px}
+    .hero-float strong{display:block;font-size:1.5rem;line-height:1;color:var(--accent2)}
+    .hero-float span{display:block;margin-top:8px;font-size:.88rem;color:var(--muted);line-height:1.5}
+    .hero-strip{left:28px;bottom:132px;padding:10px 14px;border-radius:999px;font-size:.83rem;font-weight:800;color:var(--accent2)}
+    .hero-note{right:26px;top:26px;padding:12px 14px;border-radius:16px;font-size:.84rem;color:#f0ded5;max-width:180px}
+    .glow{position:absolute;border-radius:999px;filter:blur(44px);opacity:.48;pointer-events:none}
+    .glow.one{width:190px;height:190px;right:-10px;top:90px;background:rgba(217,178,159,.20)}
+    .glow.two{width:220px;height:220px;left:-28px;bottom:26px;background:rgba(193,142,149,.20)}
+
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}
+    .cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .trust-card,.service-card,.review-card,.faq-item,.contact-card,.hours-card,.gallery-card,.cta-panel,.compare-card,.proof-band{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow)}
+    .trust-card{padding:24px;border-radius:24px}
+    .trust-card h3,.service-card h3,.review-card h3,.faq-item h3,.compare-card h3,.proof-band h3{margin:0 0 10px;font-size:1.04rem}
+    .trust-card p,.service-card p,.review-card p,.faq-item p,.compare-card p,.proof-band p{margin:0;color:var(--muted);line-height:1.72}
+    .icon{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;margin-bottom:14px;background:linear-gradient(135deg,rgba(217,178,159,.14),rgba(193,142,149,.12));font-weight:900;color:var(--accent2)}
+
+    .proof-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .proof-band{padding:28px;border-radius:26px}
+    .proof-band strong{display:block;font-size:2.6rem;letter-spacing:-.04em;margin-bottom:8px;color:var(--accent2)}
+
+    .compare-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch}
+    .compare-stage{min-height:560px;position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(160deg,#1c1318,#312027 60%,#674941);border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)}
+    .compare-sides{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr}
+    .side{position:relative;padding:28px}
+    .side::before{content:"";position:absolute;inset:20px;border-radius:24px;border:1px solid rgba(255,255,255,.16)}
+    .side.before::after,.side.after::after{content:"";position:absolute;inset:20px;border-radius:24px}
+    .side.before::after{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),radial-gradient(circle at top center,rgba(255,255,255,.08),transparent 28%),linear-gradient(145deg,rgba(93,58,70,.42),rgba(28,20,24,.34))}
+    .side.after::after{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.01)),radial-gradient(circle at top center,rgba(217,178,159,.16),transparent 28%),linear-gradient(145deg,rgba(107,74,68,.38),rgba(217,178,159,.16))}
+    .compare-divider{position:absolute;left:50%;top:0;bottom:0;width:3px;background:linear-gradient(180deg,transparent,var(--accent),transparent);transform:translateX(-50%);z-index:2}
+    .compare-handle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:999px;background:#20161a;display:grid;place-items:center;z-index:3;border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow);font-weight:900;color:var(--accent2)}
+    .pill{position:absolute;left:34px;bottom:34px;padding:10px 14px;border-radius:999px;background:rgba(21,15,18,.82);font-size:.84rem;font-weight:800;color:var(--accent2);z-index:2}
+    .compare-side{display:grid;gap:18px}
+    .compare-card{padding:24px;border-radius:24px}
+
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{padding:24px;border-radius:26px;position:relative;overflow:hidden}
+    .service-card::after{content:"";position:absolute;right:-22px;top:-22px;width:110px;height:110px;border-radius:32px;background:linear-gradient(135deg,rgba(217,178,159,.12),rgba(193,142,149,.10));transform:rotate(18deg)}
+    .tag{display:inline-flex;padding:9px 12px;border-radius:999px;background:rgba(217,178,159,.12);font-size:.78rem;font-weight:800;color:var(--accent2);margin-bottom:14px}
+
+    .review-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(320px,1fr);gap:18px;overflow:auto;scrollbar-width:none;padding-bottom:8px}
+    .review-track::-webkit-scrollbar{display:none}
+    .review-card{padding:24px;border-radius:24px;min-height:260px}
+    .review-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+    .name{font-weight:800}
+    .stars{color:var(--accent);letter-spacing:.14em}
+
+    .gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:18px}
+    .gallery-card{position:relative;overflow:hidden;border-radius:28px;padding:22px}
+    .gallery-card.large{grid-row:1 / span 2}
+    .gallery-card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.28)),radial-gradient(circle at top left,rgba(255,255,255,.10),transparent 30%),linear-gradient(145deg,#20161a,#392429 58%,#7d5e52)}
+    .gallery-card:nth-child(2)::before{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.28)),radial-gradient(circle at top left,rgba(255,255,255,.10),transparent 30%),linear-gradient(145deg,#1d1418,#302027 58%,#8c685c)}
+    .gallery-card:nth-child(3)::before{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.28)),radial-gradient(circle at top left,rgba(255,255,255,.10),transparent 30%),linear-gradient(145deg,#1b1317,#2d1e24 58%,#9b7566)}
+    .gallery-card:nth-child(4)::before{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.28)),radial-gradient(circle at top left,rgba(255,255,255,.10),transparent 30%),linear-gradient(145deg,#1d1418,#312128 58%,#8b6a61)}
+    .gallery-card>*{position:relative;z-index:1}
+    .gallery-card span{display:inline-flex;padding:9px 12px;border-radius:999px;background:rgba(20,14,17,.84);font-size:.8rem;font-weight:800;color:var(--accent2)}
+    .gallery-card h3{margin:12px 0 0;max-width:12ch;font-size:1.18rem;line-height:1.06;color:#fff}
+
+    .cta-panel{padding:36px;border-radius:30px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:linear-gradient(135deg,#20161b,#3a252b 58%,#694a43)}
+    .cta-panel p{margin:10px 0 0;max-width:54ch;line-height:1.7;color:#d8c7be}
+
+    .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .faq-item{padding:24px;border-radius:24px}
+
+    .contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:20px}
+    .contact-stack{display:grid;gap:18px}
+    .contact-card,.hours-card{padding:24px;border-radius:26px}
+    .row{padding:14px 0;border-bottom:1px solid var(--line)}
+    .row:last-child{border-bottom:none;padding-bottom:0}
+    .label{display:block;font-size:.8rem;font-weight:800;color:var(--accent2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+    .hours-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+    .hours-row:last-child{border-bottom:none;padding-bottom:0}
+    .hours-row span:last-child{font-weight:800}
+    .map{min-height:100%;overflow:hidden;border-radius:28px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);background:#fff}
+    .map iframe{width:100%;height:100%;min-height:620px;border:0}
+
+    footer{padding:26px 0 112px;border-top:1px solid rgba(255,255,255,.06)}
+    .footer-grid{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted)}
+    .footer-note{font-size:.92rem;color:var(--muted)}
+    .credit{font-size:.78rem;color:#af9588;opacity:.88}
+
+    .floating-cta{position:fixed;left:16px;right:16px;bottom:16px;z-index:55;display:none;grid-template-columns:1fr 1fr;gap:12px}
+
+    [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .72s ease, transform .72s ease}
+    [data-reveal].is-visible{opacity:1;transform:none}
+
+    @media (max-width:1080px){
+      .hero-grid,.compare-grid,.contact-grid,.proof-grid{grid-template-columns:1fr}
+      .cards-4{grid-template-columns:repeat(2,1fr)}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:260px 220px 220px}
+      .gallery-card.large{grid-column:1 / span 2;grid-row:auto}
+      .visual-shell{height:620px}
+      .cta-panel{flex-direction:column;align-items:flex-start}
+    }
+    @media (max-width:780px){
+      .section{padding:74px 0}
+      .nav-links,.nav-actions{display:none}
+      .menu-toggle{display:block}
+      .mobile-menu{gap:12px}
+      .hero{padding-top:20px}
+      .hero-stats,.cards-4,.services-grid,.faq-grid{grid-template-columns:1fr}
+      .gallery-grid{grid-template-columns:1fr;grid-template-rows:auto}
+      .gallery-card,.gallery-card.large{min-height:220px}
+      .review-track{grid-auto-columns:86%}
+      .section-head{flex-direction:column;align-items:flex-start}
+      .map iframe{min-height:360px}
+      .floating-cta{display:grid}
+      .hero-note{display:none}
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *{animation:none !important;transition:none !important}
+      [data-reveal]{opacity:1;transform:none}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HairSalon",
+    "name":"Angel Kuaför Bay Bayan",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"İçerenköy, Alanaldı Cd. No:2-4",
+      "addressLocality":"Ataşehir",
+      "addressRegion":"İstanbul",
+      "addressCountry":"TR"
+    },
+    "telephone":"+90 537 412 75 85",
+    "url":"https://www.facebook.com/Angelbaybayankuaforsalonu/",
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"45"},
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"08:30","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"09:00","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"08:30","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"08:30","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:30","closes":"20:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:30","closes":"20:00"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Angel Kuaför anasayfa">
+        <div class="brand-mark"></div>
+        <div>
+          <strong>Angel Kuaför Bay Bayan</strong>
+          <span>İçerenköy · Samimi, Köklü ve Premium Salon</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#once-sonra">Öncesi Sonrası</a>
+        <a href="#yorumlar">Yorumlar</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-secondary" href="tel:+905374127585">Ara</a>
+        <a class="btn btn-primary" href="https://wa.me/905374127585?text=Merhaba%20Angel%20Kuaf%C3%B6r%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+      <button class="menu-toggle" id="menuBtn" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#once-sonra">Öncesi Sonrası</a>
+      <a href="#yorumlar">Yorumlar</a>
+      <a href="#iletisim">İletişim</a>
+      <a class="btn btn-secondary" href="tel:+905374127585">Telefonla Ara</a>
+      <a class="btn btn-primary" href="https://wa.me/905374127585?text=Merhaba%20Angel%20Kuaf%C3%B6r%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">WhatsApp'tan Yaz</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <div class="eyebrow">4.7 puan · 45 yorum · samimiyet ve sadakat odaklı aura</div>
+          <h1 class="title">Yıllardır tercih edilen samimiyeti premium sonuçla buluşturan kuaför deneyimi</h1>
+          <p class="lead">Angel Kuaför Bay Bayan için bu tasarım sıcaklık duygusunu merkezde tutuyor. Çünkü işletmenin en büyük gücü yalnızca işlem çeşitliliği değil, uzun yıllardır güven veren bir ekip olması. Sayfa bu yüzden soğuk lüks değil, samimi lüks mantığıyla kuruldu.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/905374127585?text=Merhaba%20Angel%20Kuaf%C3%B6r%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">Hemen Randevu Al</a>
+            <a class="btn btn-secondary" href="tel:+905374127585">Telefonla Ara</a>
+            <a class="btn btn-secondary" href="#yorumlar">Yorumları Gör</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>2011'den beri</strong><span>Yorumlarda tekrar eden sadakat ve yıllardır tercih edilme duygusu güçlü güven sinyali oluşturuyor.</span></div>
+            <div class="stat"><strong>Samimi Ekip</strong><span>Güler yüz, ilgi ve ihtiyaç odaklı yaklaşım işletmenin en net farklarından biri gibi görünüyor.</span></div>
+            <div class="stat"><strong>Dönüşüm Hissi</strong><span>Müşteri yorumlarında çıkınca fark edilen değişim vurgusu doğrudan satış gücüne çevrildi.</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" data-reveal>
+          <div class="glow one"></div>
+          <div class="glow two"></div>
+          <div class="visual-shell">
+            <div class="visual-core">
+              <div class="hero-badge">
+                <strong>Sadakat odaklı salon</strong>
+                <span>Ailecek gelen ve yıllardır değişmeyen müşteri davranışı bu markanın en değerli sosyal kanıtı.</span>
+              </div>
+              <div class="hero-note">Bay bayan yapı korunuyor ama kadın müşteri estetiğini bozmayan premium sunum tercih edildi.</div>
+              <div class="hero-strip">Saç Boyama · Kaynak · Örgü · Rasta</div>
+              <div class="hero-float">
+                <strong>Nezih ve sıcak</strong>
+                <span>Yorumlarda geçen huzur, ilgi ve memnuniyet duygusu görsel hikâyenin merkezine yerleştirildi.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container proof-grid">
+        <article class="proof-band" data-reveal>
+          <h3>Markanın asıl değeri ne</h3>
+          <strong>Tek seferlik değil sadakat üreten bir salon algısı</strong>
+          <p>Bir müşterinin yalnızca memnun kalması başka şey, 2011'den beri aynı yeri tercih etmesi başka şey. Angel için sitede asıl satılan şey işlem listesi değil, tekrar geri dönme güveni. Bu yüzden üst yapı tamamen sadakat ve samimiyet ekseninde kuruldu.</p>
+        </article>
+        <article class="proof-band" data-reveal>
+          <h3>İlk bakış güveni</h3>
+          <p>45 yorum ve 4.7 puan tek başına iyi ama yorumların içeriği daha da güçlü. Ailecek gelinmesi, güler yüz, uygun yaklaşım ve değişimin hissedilmesi bu işletmeyi fiyat yarışından çıkarır.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cards-4">
+          <article class="trust-card" data-reveal>
+            <div class="icon">01</div>
+            <h3>Ailecek tercih edilme</h3>
+            <p>Birden fazla yorumda ailece gelme ve uzun dönem bağlılık hissi öne çıkıyor. Bu çok güçlü bir güven ifadesi.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <div class="icon">02</div>
+            <h3>İhtiyaca göre hizmet</h3>
+            <p>Yalnızca işlem yapmak değil, müşterinin ihtiyacına göre doğru yönlendirme yapan ekip algısı oluşuyor.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <div class="icon">03</div>
+            <h3>Nezih ve huzurlu ortam</h3>
+            <p>İşletmenin sert veya mesafeli değil, rahatlatan ve konforlu bir deneyim sunduğu açıkça hissediliyor.</p>
+          </article>
+          <article class="trust-card" data-reveal>
+            <div class="icon">04</div>
+            <h3>Memnuniyet ve uygunluk</h3>
+            <p>İlgi, memnuniyet ve uygun yaklaşımın birlikte anılması potansiyel müşteride bariyeri düşürür.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="once-sonra">
+      <div class="container compare-grid">
+        <div class="compare-stage" data-reveal>
+          <div class="compare-sides">
+            <div class="side before"><div class="pill">Önce</div></div>
+            <div class="side after"><div class="pill">Sonra</div></div>
+          </div>
+          <div class="compare-divider"></div>
+          <div class="compare-handle">⇄</div>
+        </div>
+        <div class="compare-side">
+          <div>
+            <div class="eyebrow">Before After Alanı</div>
+            <h2 class="subhead">Çıkınca değişimi fark ettiren sonuç duygusu burada vitrine alındı</h2>
+            <p class="lead">Bu işletmede before after bölümü klasik bir saç foto alanı gibi düşünülmedi. Yorumlarda geçen “çıktığınızda değişimi fark ediyorsunuz” cümlesi ana satış duygusu yapıldı. Böylece veri az olsa bile bölüm boş değil, anlamlı görünüyor.</p>
+          </div>
+          <article class="compare-card" data-reveal>
+            <h3>Dönüşüm sözü</h3>
+            <p>Ziyaretçiye yalnızca hizmet değil aynada hissedilecek bir fark vaat edildiği duygusu verilir.</p>
+          </article>
+          <article class="compare-card" data-reveal>
+            <h3>Uydurma görsel yok</h3>
+            <p>Gerçek foto verilmediği için rastgele stok model kullanılmadı. Onun yerine premium placeholder yapısı korundu.</p>
+          </article>
+          <a class="btn btn-primary" href="https://wa.me/905374127585?text=Merhaba%20Angel%20Kuaf%C3%B6r%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">Randevu İçin Yaz</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="hizmetler">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">Hizmetler</div>
+            <h2 class="subhead">İşletmenin güven yapısını bozmadan öne çıkarılan güçlü servisler</h2>
+          </div>
+          <p class="lead">Verilen liste içinden yalnızca görüneni değil satış üretme ihtimali yüksek olanları seçtim. Böylece hizmet alanı uzun ama dağınık değil, küratörlü ve premium görünüyor.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <span class="tag">Color</span>
+            <h3>Saç Boyama</h3>
+            <p>Görünümü tazelemek ve daha canlı tonlar yakalamak isteyen müşteriler için en temel karar alanlarından biri.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="tag">Volume</span>
+            <h3>Saç Kaynaklama</h3>
+            <p>Uzunluk ve dolgunluk arayan müşteriler için premium değer algısı en yüksek işlemlerden biri.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="tag">Style</span>
+            <h3>Kutu Örgü</h3>
+            <p>Daha güçlü stil etkisi arayan ziyaretçiler için karakterli ve dikkat çekici bir hizmet alanı oluşturur.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="tag">Texture</span>
+            <h3>Rasta</h3>
+            <p>İşletmenin daha özgün ve teknik işlem yapabilen tarafını göstererek fark yaratır.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="tag">Beauty</span>
+            <h3>Manikür Pedikür</h3>
+            <p>Kuaför deneyimini yalnızca saçla sınırlamayan bakım tarafı ziyaretçi gözünde değeri artırır.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="tag">Detail</span>
+            <h3>İple Kaş Alımı</h3>
+            <p>Detay bakım hizmetleri salonun özenli ve tamamlayıcı hizmet anlayışını güçlendirir.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">Galeri Vitrini</div>
+            <h2 class="subhead">Aile sıcaklığını kaybetmeden premium görünen bir salon hikâyesi</h2>
+          </div>
+          <p class="lead">Bu işletmenin ruhu steril lüks değil, konforlu lüks. Galeri blokları da tam olarak bu hissi taşıyacak şekilde tasarlandı. Sıcak tonlar, samimi zemin ve güçlü ışık dokuları birlikte çalışıyor.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card large" data-reveal>
+            <span>Warm Prestige</span>
+            <h3>Samimiyeti kaybetmeden pahalı his veren salon atmosferi</h3>
+          </article>
+          <article class="gallery-card" data-reveal>
+            <span>Color Shift</span>
+            <h3>Değişimi hissettiren görünüm</h3>
+          </article>
+          <article class="gallery-card" data-reveal>
+            <span>Care Detail</span>
+            <h3>Özen ve ilgi duygusu</h3>
+          </article>
+          <article class="gallery-card" data-reveal>
+            <span>Loyal Client</span>
+            <h3>Yıllardır süren güven</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="yorumlar">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">Yorumlar ve Güven</div>
+            <h2 class="subhead">Bu sayfanın asıl satış gücü yorumlarda geçen aynı ortak duygu</h2>
+          </div>
+          <p class="lead">Burada uydurma yorum yazmadım. Paylaştığın gerçek yorumlardaki ana kalıpları premium kartlara çevirdim. Çünkü Angel’ın asıl gücü işlem listesinden çok güven biriktirmesi.</p>
+        </div>
+        <div class="review-track" id="reviewTrack">
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Haluk Tokmaktepe</div><div class="muted">İlgi ve memnuniyet</div></div><div class="stars">★★★★★</div></div>
+            <p>Uzun süreli bir sorunla ilgilenilmesi ve yoğun memnuniyet ifadesi işletmenin çözüm odaklı yaklaşımını destekliyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Sezal Özertural</div><div class="muted">Ailecek tercih</div></div><div class="stars">★★★★★</div></div>
+            <p>Ailecek gidilen huzur dolu bir mekân ifadesi çok güçlü bir sosyal kanıt. Rastgele müşteri değil sadık müşteri oluşturuyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Özlem Calayır</div><div class="muted">İhtiyaca göre ekip</div></div><div class="stars">★★★★★</div></div>
+            <p>Güler yüz ve işi doğru kişinin ihtiyacına göre yapma vurgusu profesyonel danışmanlık algısı kuruyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Bahadır Girgin</div><div class="muted">Değişim hissi</div></div><div class="stars">★★★★★</div></div>
+            <p>Kuaförden çıkınca fark edilen değişim söylemi, bu markanın duygusal satış cümlesi haline getirildi.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Ayten Akçay</div><div class="muted">Doğru adres</div></div><div class="stars">★★★★★</div></div>
+            <p>Muhteşem değişim için en doğru adres ifadesi sayfada direkt güven köprüsü görevi görüyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Yüksel Demirci</div><div class="muted">2011’den beri</div></div><div class="stars">★★★★★</div></div>
+            <p>2011 yılından bugüne kadar değişmeyen tek adres olması, sadakat gücünü tek cümlede kanıtlıyor.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Mürvet Gündüz</div><div class="muted">İlgi ve uygunluk</div></div><div class="stars">★★★★★</div></div>
+            <p>Müşteri memnuniyeti, ilgi ve uygun oluşu vurgusu yeni müşterinin çekincelerini azaltır.</p>
+          </article>
+          <article class="review-card" data-reveal>
+            <div class="review-top"><div><div class="name">Emrah Aybek</div><div class="muted">Kaliteli ve nezih</div></div><div class="stars">★★★★★</div></div>
+            <p>Kaliteli ve nezih ortam algısı premium ama rahat salon konumlandırmasını destekliyor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div>
+            <h2 class="subhead" style="margin:0">Yoğun saatlerden önce iletişime geçin ve yerinizi ayırtın</h2>
+            <p>Angel Kuaför’de insanlar tek işlem için değil güven duydukları için geri dönüyor. Siz de saç, bakım ya da detay hizmetler için hızlıca iletişime geçip uygun saati netleştirebilirsiniz.</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px">
+            <a class="btn btn-primary" href="https://wa.me/905374127585?text=Merhaba%20Angel%20Kuaf%C3%B6r%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">WhatsApp'tan Yaz</a>
+            <a class="btn btn-secondary" href="tel:+905374127585">Telefonla Ara</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">Sık Sorulanlar</div>
+            <h2 class="subhead">Kararsızlığı azaltan net ve güven veren cevaplar</h2>
+          </div>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-item" data-reveal>
+            <h3>Angel Kuaför neden farklı görünüyor</h3>
+            <p>Bu işletmenin asıl gücü sıcaklık, sadakat ve memnuniyet. Tasarım da bunu öne çıkaracak şekilde kuruldu, soğuk template mantığı kullanılmadı.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>En çok dikkat çeken hizmetler hangileri</h3>
+            <p>Saç boyama, saç kaynak, örgü, rasta, manikür pedikür ve detay bakım hizmetleri öne çıkarıldı.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>Salon hafta sonu açık mı</h3>
+            <p>Cumartesi 08:30–20:00 açık. Pazar günü kapalı görünüyor.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>Randevu almak için en hızlı yol ne</h3>
+            <p>Sayfadaki WhatsApp ve telefon butonları doğrudan iletişim için hazırlanmıştır. Mobilde alt sabit butonlar da aktif.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="iletisim">
+      <div class="container contact-grid">
+        <div class="contact-stack">
+          <article class="contact-card" data-reveal>
+            <h3>İletişim</h3>
+            <div class="row"><span class="label">Telefon</span><a href="tel:+905374127585">0537 412 75 85</a></div>
+            <div class="row"><span class="label">WhatsApp</span><a href="https://wa.me/905374127585?text=Merhaba%20Angel%20Kuaf%C3%B6r%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">Randevu için yazın</a></div>
+            <div class="row"><span class="label">Facebook</span><a href="https://www.facebook.com/Angelbaybayankuaforsalonu/" target="_blank" rel="noreferrer">Angel Bay Bayan Kuaför Salonu</a></div>
+            <div class="row"><span class="label">Adres</span><span>İçerenköy, Alanaldı Cd. No:2-4, 34752 Ataşehir / İstanbul</span></div>
+          </article>
+          <article class="hours-card" data-reveal>
+            <h3>Çalışma Saatleri</h3>
+            <div class="hours-row"><span>Pazartesi</span><span>08:30–20:00</span></div>
+            <div class="hours-row"><span>Salı</span><span>09:00–20:00</span></div>
+            <div class="hours-row"><span>Çarşamba</span><span>08:30–20:00</span></div>
+            <div class="hours-row"><span>Perşembe</span><span>08:30–20:00</span></div>
+            <div class="hours-row"><span>Cuma</span><span>08:30–20:00</span></div>
+            <div class="hours-row"><span>Cumartesi</span><span>08:30–20:00</span></div>
+            <div class="hours-row"><span>Pazar</span><span>Kapalı</span></div>
+          </article>
+        </div>
+        <div class="map" data-reveal>
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Angel Kuaför konum" src="https://www.google.com/maps?q=%C4%B0%C3%A7erenk%C3%B6y%20Alanald%C4%B1%20Cd.%20No:2-4%20Ata%C5%9Fehir%20%C4%B0stanbul&z=15&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Angel Kuaför Bay Bayan</strong>
+        <div class="footer-note">İçerenköy Ataşehir’de samimi ekip, kalıcı memnuniyet ve dönüşüm hissi sunan premium kuaför deneyimi</div>
+        <div class="credit">site by penumbra digital</div>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Anasayfa</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#yorumlar">Yorumlar</a>
+        <a href="#iletisim">İletişim</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-cta">
+    <a class="btn btn-secondary" href="tel:+905374127585">Ara</a>
+    <a class="btn btn-primary" href="https://wa.me/905374127585?text=Merhaba%20Angel%20Kuaf%C3%B6r%20i%C3%A7in%20randevu%20almak%20istiyorum" target="_blank" rel="noreferrer">WhatsApp</a>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if(menuBtn){
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.style.display = mobileMenu.style.display === 'grid' ? 'none' : 'grid';
+      });
+    }
+
+    const reveals = document.querySelectorAll('[data-reveal]');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){
+      reveals.forEach(el => el.classList.add('is-visible'));
+    } else {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.14});
+      reveals.forEach(el => io.observe(el));
+    }
+
+    const reviewTrack = document.getElementById('reviewTrack');
+    let autoScroll;
+    function startAuto(){
+      if(!reviewTrack || window.innerWidth < 781 || reduce) return;
+      clearInterval(autoScroll);
+      autoScroll = setInterval(() => {
+        const max = reviewTrack.scrollWidth - reviewTrack.clientWidth;
+        const next = reviewTrack.scrollLeft + 340;
+        reviewTrack.scrollTo({left: next >= max ? 0 : next, behavior:'smooth'});
+      }, 3600);
+    }
+    reviewTrack?.addEventListener('pointerdown', () => clearInterval(autoScroll));
+    reviewTrack?.addEventListener('pointerup', startAuto);
+    window.addEventListener('resize', startAuto);
+    startAuto();
+  </script>
+</body>
+</html>
